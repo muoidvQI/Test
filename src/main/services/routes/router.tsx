@@ -7,7 +7,7 @@ import BaseLayout from 'src/main/layouts/BaseLayout';
 
 import SuspenseLoader from 'src/presentation/components/SuspenseLoader';
 
-//
+//fallback khi tải lazy để import động
 const Loader = (Component) => (props) =>
   (
     <Suspense fallback={<SuspenseLoader />}>

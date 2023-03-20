@@ -6,7 +6,24 @@ import Footer from 'src/presentation/components/Footer';
 
 import RecentOrders from './RecentOrders';
 
+import { createSelector } from '@reduxjs/toolkit'
+import {increment } from '../../../store/reducers'
+import { useAppSelector, useAppDispatch } from './../../../store/hooks'
+ 
 function ApplicationsTransactions() {
+
+  // Lấy ra state
+   const counterSelect = (state) =>  state.counter.value;
+   // Lấy ra state sau filter
+   const customSelector = createSelector(counterSelect, (counter)=> {
+      return counter;
+  }); 
+
+  const dispatch = useAppDispatch();
+  dispatch(increment())
+
+  console.log(useAppSelector(counterSelect))
+
   return (
     <>
       <Helmet>

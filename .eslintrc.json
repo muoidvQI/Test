@@ -16,7 +16,8 @@
     },
     "ecmaVersion": 11,
     "project": "./tsconfig.json",
-    "sourceType": "module"
+    "sourceType": "module",
+    "extraFileExtensions": [".mdx", ".ts"]
   },
   "plugins": ["react", "@typescript-eslint"],
   "settings": {
